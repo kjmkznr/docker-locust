@@ -7,7 +7,7 @@ Docker base image for locust master/slave/standalone.
 This is a base image of locust. So you have to build your own docker image from this image like this.
 
 ```
-FROM hakobera/locust
+FROM kjmkznr/locust
 
 ADD ./test /test
 ENV SCENARIO_FILE /test/locustfile.py
