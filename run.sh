@@ -7,6 +7,7 @@ LOCUST_MODE=${LOCUST_MODE:-standalone}
 if [ "$LOCUST_MODE" = "master" ]; then
   LOCUST_OPTS="$LOCUST_OPTS --master"
 elif [ "$LOCUST_MODE" = "slave" ]; then
+  MASTER_HOST=${MASTER_HOST:-${MASTER_PORT_8089_TCP_ADDR}}
   LOCUST_OPTS="$LOCUST_OPTS --slave --master-host=$MASTER_HOST"
 fi
 
